@@ -2,19 +2,28 @@ version: 2
 
 models:
   - name: stg_customers
+    description: Raw customers data; one customer per row
     columns:
       - name: customer_id
+        description: Customers primary key
         tests:
           - unique
           - not_null
+      - name: first_name
+        description: Each customer's first name
+      - name: last_name
+        description: Each customer's last name
 
   - name: stg_orders
+    description: Raw orders data
     columns:
       - name: order_id
+        description: Orders primary key
         tests:
           - unique
           - not_null
       - name: status
+        description: "{{ doc('order_status')}}"
         tests:
           - accepted_values:
               values:

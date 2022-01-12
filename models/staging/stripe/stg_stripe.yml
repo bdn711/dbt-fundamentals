@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Raw payments data
+    columns:
+      - name: payment_id
+        description: Payments primary key
+      - name: payment_method
+        description: Payment method used
+      - name: status
+        description: "{{doc('payment_status')}}"
+      - name: amount
+        description: Payment amount in dollars
