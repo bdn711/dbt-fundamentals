@@ -5,14 +5,14 @@ sources:
     database: brett-demo-project
     schema: jaffle_shop
     tables:
-      - name: stg_customers
+      - name: customers
         columns:
           - name: customer_id
             tests:
             - unique
             - not_null
 
-      - name: stg_orders
+      - name: orders
         columns:
           - name: order_id
             tests:

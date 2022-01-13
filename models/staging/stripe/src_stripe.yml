@@ -5,4 +5,4 @@ sources:
     database: brett-demo-project
     schema: stripe
     tables:
-      - name: stg_payment
+      - name: payment
